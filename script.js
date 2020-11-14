@@ -18,7 +18,7 @@ else {
  // Re-rendering of the HTML to display the appropriate content
  function displayCityWeather(city) {
    $("#show_city").text(city);
-   var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=69712313de0b3188381f1b726de5c5a9";
+   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=69712313de0b3188381f1b726de5c5a9";
    
    $.ajax({
      url: queryURL,
@@ -34,7 +34,7 @@ else {
        $("#wind_val").text(wind_speed + " MPH");
 
        var iconcode = response.weather[0].icon;
-       var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+       var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
        let locationIcon = $('.weather-icon');
        $('locationIcon').attr('src', iconurl);
 
