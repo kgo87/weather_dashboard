@@ -1,7 +1,9 @@
+// Initializing global variables
 var lat;
 var long;
 var cities;
 
+// Displaying the information from the local storage
 var localStorageCont = JSON.parse(localStorage.getItem("city_list"));
 if (localStorageCont===null) {
     cities = [];
@@ -10,19 +12,12 @@ else {
     cities = localStorageCont
 }
 
-//  Initial array of cities
-//  var cities = ["Seattle", "Tacoma", "Los Angeles", "Portland"];
 
- // displayMovieInfo function re-renders the HTML to display the appropriate content
+ // Re-rendering of the HTML to display the appropriate content
  function displayCityWeather(city) {
-
-//    var city = $(this).attr("data-name");
    $("#show_city").text(city);
-
    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=69712313de0b3188381f1b726de5c5a9";
    
-
-
    $.ajax({
      url: queryURL,
      method: "GET"
@@ -111,7 +106,7 @@ else {
    }
  }
 
- // This function handles events where the add movie button is clicked
+ // This function handles events where the Search button is clicked
  $("#button-addon2").on("click", function(event) {
    event.preventDefault();
    var city = $("#search-city").val().trim();
@@ -127,7 +122,7 @@ else {
 
 
 
- // Calling the renderButtons function to display the initial buttons
+ // Calling the renderButtons function to display the search history buttons
  renderButtons();
 
  function savedCityClick(event) {
@@ -136,7 +131,7 @@ else {
     displayCityWeather(city)
  }
 
-
+//  Rendering of the HTML to display 5-day weather forecast
 function renderForecast(forecast) {
     $("#five_day_forecast").empty();
     for (var i=0; i<5; i++) {
@@ -150,7 +145,7 @@ function renderForecast(forecast) {
                 <h5 class="card-title">${date}</h5>
                 <img src="icons/${iconecode}.png"</img>
                 <p class="card-text">${"Temp: " + temp + " °F"}</p>
-                <p class="card-text">${"Temp: " + humid + "%"}</p>
+                <p class="card-text">${"Humidity: " + humid + "%"}</p>
             </div>
       </div>`)
     

@@ -1,21 +1,17 @@
-/* * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-} */
 
 body {
     background-color: #d9dcd6;
     margin:0 px;
     padding:0px;
     width: 100vw;
+    color:#25274d;
 }
 
 .jumbotron{
     padding-top: 30px;
     padding-bottom: 30px;
     color: white;
-    background-color:#2a607c;
+    background-color: #29648A;
     border-radius: 0px;
 }
 
@@ -26,16 +22,19 @@ main{
     width: 95vw;
     margin-left: 20px;
     margin-right:20px;
-    
 }
 
 form {
-    width: 25vw;
+    width: 20vw;
     margin: 10px;
 }
 
+#button-addon2 {
+    background-color:#2E9CCA;
+}
+
 #weather_info {
-    width: 60vw;
+    width: 65vw;
     margin: 10px;
 
 }
@@ -54,21 +53,18 @@ form {
 }
 
 #five_days_weather{
-    background-color: deepskyblue;
+    background-color:#2E9CCA;
     color: white;
     margin: 10px;
 }
 
-/* .weather-icon{
-    width: 90px;
-    height: 58px;
+h3 {
+    margin: 10px;
 }
+
 .weather-icon img{
-    width: 90px;
-    height: 58px;
-} */
+    width: 75px;
+    height: 50px;
+}
 
 
-/* #current_weather{
-    border: blueviolet;
-} */
