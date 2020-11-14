@@ -11,12 +11,7 @@ The expected functionoality is described below:
 * Future weather conditions include a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
 * The user can click on the city in the search history and be presented with the same information 
 * All the searhed history is saved in the local storage and is accessible after page is reloaded. 
-
-
-
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-
+* When the page reloads, the last searched city forecast is displayed.
 
 
 # URL to a live page

@@ -10,6 +10,8 @@ if (localStorageCont===null) {
 }
 else {
     cities = localStorageCont
+    city = cities[cities.length-1];
+    displayCityWeather(city);
 }
 
 
